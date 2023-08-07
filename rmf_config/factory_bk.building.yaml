@@ -1,0 +1,150 @@
+crowd_sim:
+  agent_groups:
+    - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets: []
+  model_types: []
+  obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions: []
+  update_time_step: 0.1
+graphs:
+  {}
+levels:
+  L1:
+    drawing:
+      filename: ../maps/png/FacoryBK.png
+    elevation: 0
+    flattened_x_offset: 0
+    flattened_y_offset: 0
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [19, 0, 2, 20, 7, 16]
+    layers:
+      {}
+    measurements:
+      - [21, 22, {distance: [3, 51.196]}]
+    models:
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1875.5, y: 819.724, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1891.203, y: 819.724, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1918.685, y: 819.287, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1934.824, y: 819.724, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1800.907, y: 819.724, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1817.92, y: 819.724, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1581.493, y: 807.946, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1532.161, y: 818.1369999999999, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1548.023, y: 818.534, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1450.47, y: 817.3440000000001, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/AdjTable, name: OpenRobotics/AdjTable, static: true, x: 1466.729, y: 817.741, yaw: 1.5708, z: 0}
+    vertices:
+      - [800.295, 573.251, 0, ""]
+      - [878.8579999999999, 573.123, 0, ""]
+      - [797.942, 1828.307, 0, ""]
+      - [663.8339999999999, 1829.226, 0, ""]
+      - [663.8339999999999, 1815.809, 0, ""]
+      - [20.681, 1816.684, 0, ""]
+      - [5.596, 1904.967, 0, ""]
+      - [2771.525, 1901.992, 0, ""]
+      - [2771.525, 1679.815, 0, ""]
+      - [2758.777, 1679.208, 0, ""]
+      - [2759.384, 1592.401, 0, ""]
+      - [2770.918, 1592.401, 0, ""]
+      - [2771.525, 1293.129, 0, ""]
+      - [2759.991, 1293.736, 0, ""]
+      - [2759.991, 1226.961, 0, ""]
+      - [2770.918, 1226.961, 0, ""]
+      - [2772.739, 400.776, 0, ""]
+      - [2234.034, 400.847, 0, ""]
+      - [2234.638, 408.096, 0, ""]
+      - [1116.476, 411.259, 0, ""]
+      - [797.933, 1904.29, 0, ""]
+      - [994.576, 766.032, 0, ""]
+      - [2696.86, 767.928, 0, ""]
+      - [874.0599999999999, 793.054, 0, ""]
+      - [893.616, 793.054, 0, ""]
+      - [894.1180000000001, 843.7, 0, ""]
+      - [934.2329999999999, 844.201, 0, ""]
+      - [934.2329999999999, 806.593, 0, ""]
+      - [953.789, 806.091, 0, ""]
+      - [954.2910000000001, 844.201, 0, ""]
+      - [969.835, 844.201, 0, ""]
+      - [970.337, 771.492, 0, ""]
+      - [992.902, 771.9930000000001, 0, ""]
+      - [992.902, 844.702, 0, ""]
+      - [1040.037, 844.702, 0, ""]
+      - [1040.539, 797.567, 0, ""]
+      - [1062.101, 797.567, 0, ""]
+      - [1062.602, 844.201, 0, ""]
+      - [1080.686, 844.123, 0, ""]
+      - [1081.057, 771.375, 0, ""]
+      - [1104.069, 771.746, 0, ""]
+      - [1104.44, 844.495, 0, ""]
+      - [1149.351, 845.237, 0, ""]
+      - [1150.094, 772.117, 0, ""]
+      - [1173.106, 772.4880000000001, 0, ""]
+      - [1173.848, 845.237, 0, ""]
+      - [1986.81, 845.149, 0, ""]
+      - [1986.81, 792.699, 0, ""]
+      - [2007.125, 792.699, 0, ""]
+      - [2007.495, 912.374, 0, ""]
+      - [1987.18, 912.005, 0, ""]
+      - [1987.549, 859.924, 0, ""]
+      - [894.087, 858.112, 0, ""]
+      - [894.491, 910.675, 0, ""]
+      - [873.87, 910.675, 0, ""]
+    walls:
+      - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [0, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [3, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [4, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [6, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [7, 8, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [8, 9, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [9, 10, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [10, 11, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [11, 12, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [12, 13, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [13, 14, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [14, 15, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [15, 16, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [16, 17, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [17, 18, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [18, 19, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [23, 24, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [24, 25, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [25, 26, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [26, 27, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [27, 28, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [28, 29, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [29, 30, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [30, 31, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [31, 32, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [32, 33, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [33, 34, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [34, 35, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [35, 36, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [36, 37, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [37, 38, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [38, 39, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [39, 40, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [40, 41, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [41, 42, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [42, 43, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [43, 44, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [44, 45, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [45, 46, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [46, 47, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [47, 48, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [48, 49, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [49, 50, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [50, 51, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [51, 52, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [52, 53, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [53, 54, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [54, 23, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+lifts: {}
+name: factory_bk

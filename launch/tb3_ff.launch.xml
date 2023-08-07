@@ -9,7 +9,8 @@
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
     <arg name="viz_config_file" value ="$(find-pkg-share rmf_demos)/include/office/office.rviz"/>
     <arg name="config_file" value="$(find-pkg-share my_rmf)/rmf_config/tb3.building.yaml"/>
-    <arg name="dashboard_config_file" value="$(find-pkg-share rmf_demos_dashboard_resources)/office/dashboard_config.json"/>
+    <arg name="dashboard_config_file" value="$(find-pkg-share my_rmf)/dashboard_config/tb3.json"/>
+    <!-- <arg name="dashboard_config_file" value="$(find-pkg-share rmf_demos_dashboard_resources)/office/dashboard_config.json"/> -->
   </include>
 
   <!-- TinyRobot fleet adapter and robot state aggregator needed for the TinyRobot slotcar_plugin -->
@@ -27,6 +28,13 @@
       <arg name="failover_mode" value="$(var failover_mode)"/>
     </include>
   </group>
+
+
+  <!-- Simulation launch -->
+  <include file="$(find-pkg-share my_rmf)/launch/my_sim.launch.xml">
+    <arg name="map_name" value="tb3" />
+  </include>
+
 
 </launch>
 

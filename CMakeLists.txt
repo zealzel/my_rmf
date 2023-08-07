@@ -75,6 +75,6 @@ foreach(path ${traffic_editor_paths})
 endforeach()
 
 install(
-  DIRECTORY launch rviz_config maps rmf_config adapter_config
+  DIRECTORY launch rviz_config maps rmf_config adapter_config dashboard_config
   DESTINATION share/${PROJECT_NAME}
 )
