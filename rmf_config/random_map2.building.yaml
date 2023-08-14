@@ -1,0 +1,63 @@
+crowd_sim:
+  agent_groups:
+    - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+  agent_profiles:
+    - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+  enable: 0
+  goal_sets: []
+  model_types: []
+  obstacle_set: {class: 1, file_name: L1_navmesh.nav, type: nav_mesh}
+  states:
+    - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
+  transitions: []
+  update_time_step: 0.1
+graphs:
+  {}
+levels:
+  L1:
+    drawing:
+      filename: ../maps/png/random_map2.png
+    elevation: 0
+    flattened_x_offset: 0
+    flattened_y_offset: 0
+    floors:
+      - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
+        vertices: [0, 3, 2, 1]
+    layers:
+      {}
+    measurements:
+      - [12, 13, {distance: [3, 1]}]
+    models:
+      - {model_name: OpenRobotics/Chair, name: OpenRobotics/Chair, static: true, x: 55.768, y: 99.057, yaw: 0.0064, z: 0}
+      - {model_name: OpenRobotics/Bookshelf, name: OpenRobotics/Bookshelf, static: true, x: 32.23, y: 262.702, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/ConfTable, name: OpenRobotics/ConfTable, static: true, x: 1190.887, y: 165.304, yaw: -0, z: 0}
+      - {model_name: OpenRobotics/Standing person, name: OpenRobotics/Standing person, static: true, x: 435.959, y: 162.229, yaw: 1.5708, z: 0}
+      - {model_name: OpenRobotics/TrolleyBedPatient, name: OpenRobotics/TrolleyBedPatient, static: true, x: 74.639, y: 806.455, yaw: 1.5708, z: 0}
+    vertices:
+      - [15.642, 22.822, 0, ""]
+      - [12.583, 991.038, 0, ""]
+      - [1528.385, 991.038, 0, ""]
+      - [1529.914, 19.763, 0, ""]
+      - [18.701, 314.969, 0, ""]
+      - [722.302, 314.969, 0, ""]
+      - [722.302, 620.883, 0, ""]
+      - [17.171, 622.412, 0, ""]
+      - [1531.444, 313.44, 0, ""]
+      - [804.899, 314.969, 0, ""]
+      - [801.84, 809.02, 0, ""]
+      - [1529.914, 809.02, 0, ""]
+      - [723.832, 318.028, 0, ""]
+      - [803.369, 318.028, 0, ""]
+    walls:
+      - [0, 1, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [1, 2, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [3, 0, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [4, 5, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [5, 6, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [6, 7, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [8, 9, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [9, 10, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+      - [10, 11, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
+lifts: {}
+name: random_map2
