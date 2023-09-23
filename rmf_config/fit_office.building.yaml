@@ -45,6 +45,7 @@ levels:
       - {dispensable: false, model_name: OpenRobotics/Desk, name: OpenRobotics/Desk, static: true, x: 441.97199999999998, y: 759.66899999999998, yaw: -1.6563000000000001, z: 0}
       - {dispensable: false, model_name: OpenRobotics/DeskChair, name: OpenRobotics/DeskChair, static: true, x: 397.55399999999997, y: 769.10000000000002, yaw: 1.5708, z: 0}
       - {dispensable: false, model_name: OpenRobotics/DeskChair, name: OpenRobotics/DeskChair, static: true, x: 441.05900000000003, y: 774.57600000000002, yaw: 1.5708, z: 0}
+      - {dispensable: false, model_name: OpenRobotics/ParkingTrolleyMax, name: OpenRobotics/ParkingTrolleyMax, static: true, x: 224.476, y: 510.02199999999999, yaw: 1.5708, z: 0}
     vertices:
       - [267.31999999999999, 898.48500000000001, 0, ""]
       - [269.005, 851.31899999999996, 0, ""]
@@ -163,4 +164,3 @@ levels:
       - [55, 56, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
 lifts: {}
 name: fit_office
-

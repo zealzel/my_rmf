@@ -18,12 +18,9 @@ def generate_launch_description():
     headless_arg = DeclareLaunchArgument(
         "headless", default_value="false", description="Headless mode"
     )
-    x_arg = DeclareLaunchArgument(
-        "x", default_value="30", description="x position"
-    )
-    y_arg = DeclareLaunchArgument(
-        "y", default_value="-22", description="y position"
-    )
+    x_arg = DeclareLaunchArgument("x", default_value="30", description="x position")
+    y_arg = DeclareLaunchArgument("y", default_value="-22", description="y position")
+    z_arg = DeclareLaunchArgument("z", default_value="0.05", description="z position")
     ekf_config_path = PathJoinSubstitution(
         [FindPackageShare("linorobot2_base"), "config", "ekf.yaml"]
     )
@@ -56,6 +53,7 @@ def generate_launch_description():
             "linorobot2",
             "-x", LaunchConfiguration("x"),
             "-y", LaunchConfiguration("y"),
+            "-z", LaunchConfiguration("z"),
         ],
     )
 
@@ -88,6 +86,7 @@ def generate_launch_description():
             headless_arg,
             x_arg,
             y_arg,
+            z_arg,
             included_launch,
             lino_launch,
             spawn_robot_node,
@@ -95,3 +94,4 @@ def generate_launch_description():
             ekf_node,
         ]
     )
+
