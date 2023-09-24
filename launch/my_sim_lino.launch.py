@@ -5,8 +5,9 @@ from launch.launch_description_sources import (
     AnyLaunchDescriptionSource,
     PythonLaunchDescriptionSource,
 )
+from launch.conditions import IfCondition
 from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration, PathJoinSubstitution
+from launch.substitutions import LaunchConfiguration, PathJoinSubstitution, PythonExpression 
 from launch_ros.substitutions import FindPackageShare
 
 
@@ -18,9 +19,15 @@ def generate_launch_description():
     headless_arg = DeclareLaunchArgument(
         "headless", default_value="false", description="Headless mode"
     )
-    x_arg = DeclareLaunchArgument("x", default_value="30", description="x position")
-    y_arg = DeclareLaunchArgument("y", default_value="-22", description="y position")
-    z_arg = DeclareLaunchArgument("z", default_value="0.05", description="z position")
+
+    map_defaultpos = {
+        "tb3": [10, -8, 0.05],
+        "fit_office": [7, -17, 2],
+        "factory_bk": [30, -22, 0.05],
+    }
+    # x_arg = DeclareLaunchArgument("x", default_value="0", description="x position")
+    # y_arg = DeclareLaunchArgument("y", default_value="0", description="y position")
+    # z_arg = DeclareLaunchArgument("z", default_value="0", description="z position")
     ekf_config_path = PathJoinSubstitution(
         [FindPackageShare("linorobot2_base"), "config", "ekf.yaml"]
     )
@@ -41,7 +48,7 @@ def generate_launch_description():
         }.items(),
     )
 
-    spawn_robot_node = Node(
+    spawn_robot_node_tb3 = Node(
         package="gazebo_ros",
         executable="spawn_entity.py",
         name="urdf_spawner",
@@ -51,10 +58,45 @@ def generate_launch_description():
             "robot_description",
             "-entity",
             "linorobot2",
-            "-x", LaunchConfiguration("x"),
-            "-y", LaunchConfiguration("y"),
-            "-z", LaunchConfiguration("z"),
+            "-x", str(map_defaultpos["tb3"][0]),
+            "-y", str(map_defaultpos["tb3"][1]),
+            "-z", str(map_defaultpos["tb3"][2]),
         ],
+        condition=IfCondition(PythonExpression(["'", LaunchConfiguration('map_name'), "' == 'tb3'"]))
+    )
+
+    spawn_robot_node_fit_office = Node(
+        package="gazebo_ros",
+        executable="spawn_entity.py",
+        name="urdf_spawner",
+        output="screen",
+        arguments=[
+            "-topic",
+            "robot_description",
+            "-entity",
+            "linorobot2",
+            "-x", str(map_defaultpos["fit_office"][0]),
+            "-y", str(map_defaultpos["fit_office"][1]),
+            "-z", str(map_defaultpos["fit_office"][2]),
+        ],
+        condition=IfCondition(PythonExpression(["'", LaunchConfiguration('map_name'), "' == 'fit_office'"]))
+    )
+
+    spawn_robot_node_factory_bk = Node(
+        package="gazebo_ros",
+        executable="spawn_entity.py",
+        name="urdf_spawner",
+        output="screen",
+        arguments=[
+            "-topic",
+            "robot_description",
+            "-entity",
+            "linorobot2",
+            "-x", str(map_defaultpos["factory_bk"][0]),
+            "-y", str(map_defaultpos["factory_bk"][1]),
+            "-z", str(map_defaultpos["factory_bk"][2]),
+        ],
+        condition=IfCondition(PythonExpression(["'", LaunchConfiguration('map_name'), "' == 'factory_bk'"]))
     )
 
     lino_timeout_node = Node(
@@ -84,14 +126,15 @@ def generate_launch_description():
         [
             map_name_arg,
             headless_arg,
-            x_arg,
-            y_arg,
-            z_arg,
+            # x_arg,
+            # y_arg,
+            # z_arg,
             included_launch,
             lino_launch,
-            spawn_robot_node,
+            spawn_robot_node_tb3,
+            spawn_robot_node_fit_office,
+            spawn_robot_node_factory_bk,
             lino_timeout_node,
             ekf_node,
         ]
     )
-
