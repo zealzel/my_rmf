@@ -17,7 +17,7 @@ graphs:
 levels:
   L1:
     drawing:
-      filename: office3_res0.02_0523.png
+      filename: ../maps/png/office3_res0.02_0523.png
     elevation: 1
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, blue_linoleum], texture_rotation: [3, 0], texture_scale: [3, 1]}
