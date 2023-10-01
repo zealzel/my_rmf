@@ -3,26 +3,21 @@
 <launch>
   <arg name="use_sim_time" default="true"/>
   <arg name="failover_mode" default="false"/>
-  <!-- <arg name="map_name" default="tb3"/> -->
   <!-- <arg name="map_name" default="turtlebot3_world"/> -->
-  <arg name="map_name" default="tb3_X"/>
+
+  <!-- <arg name="map_name" default="tb3_X"/> -->
+  <arg name="map_name" default="tb3_Y"/>
 
   <!-- Common launch -->
   <include file="$(find-pkg-share my_rmf)/launch/common.launch.xml">
     <arg name="use_sim_time" value="$(var use_sim_time)"/>
     <arg name="viz_config_file" value ="$(find-pkg-share my_rmf)/rviz_config/fit_office.rviz"/>
     <arg name="config_file" value="$(find-pkg-share my_rmf)/rmf_config/$(var map_name).building.yaml"/>
-    <arg name="dashboard_config_file" value="$(find-pkg-share my_rmf)/dashboard_config/tb3.json"/>
+    <arg name="dashboard_config_file" value="$(find-pkg-share my_rmf)/dashboard_config/tb3_Y.json"/>
   </include>
 
   <!-- TinyRobot fleet adapter and robot state aggregator needed for the TinyRobot slotcar_plugin -->
   <group>
-    <!-- <include file="$(find-pkg-share rmf_demos_fleet_adapter)/launch/fleet_adapter.launch.xml"> -->
-    <!--   <arg name="use_sim_time" value="$(var use_sim_time)"/> -->
-    <!--   <arg name="nav_graph_file" value="$(find-pkg-share rmf_demos_maps)/maps/office/nav_graphs/0.yaml" /> -->
-    <!--   <arg name="config_file" value="$(find-pkg-share rmf_demos)/config/office/tinyRobot_config.yaml"/> -->
-    <!-- </include> -->
-    <!--  -->
     <let name="fleet_name" value="turtlebot3"/>
     <include file="$(find-pkg-share my_rmf)/adapter_config/turtlebot3_adapter.launch.xml">
       <arg name="fleet_name" value="$(var fleet_name)"/>
@@ -36,6 +31,5 @@
       <arg name="failover_mode" value="$(var failover_mode)"/>
     </include>
   </group>
-
 </launch>
 

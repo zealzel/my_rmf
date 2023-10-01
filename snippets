@@ -1,0 +1,20 @@
+
+# rmf + free-fleet (worked) (nav2 map & traffic-editor map need to be aligned. Need more study)
+rmf map: rmf_config/tb3_Y.building.yaml
+fleet adapter config: adapter_config/turtlebot3_adapter.launch.xml
+dashboard config: dashboard_config/tb3_Y.json
+commands:
+  ros2 launch my_rmf my_rmf_schedule1.launch.xml
+  ros2 launch my_rmf turtlebot3_world_ff_server.launch.xml
+  TURTLEBOT3_MODEL=burger ros2 launch my_rmf turtlebot3_world_ff.launch.xml
+  ros2 topic pub -r 3 /battery_state sensor_msgs/msg/BatteryState "{percentage: 1}" # rmf task will not work if this line is not added
+  ros2 run rmf_demos_tasks dispatch_loop -s p1 -f p2 -n 3 --use_sim_time
+
+# rmf + tinyRobot fleet adapter (still not working)
+rmf map: rmf_config/tb3.building.yaml
+fleet adapter config: config/tb3/tinyRobot_config.yaml
+dashboard config: dashboard_config/tb3.json
+commands:
+  ros2 launch my_rmf my_rmf_schedule2.launch.xml
+  ros2 launch my_rmf my_sim.launch.xml map_name:=tb3 headless:=false
+  ros2 run rmf_demos_tasks dispatch_loop -s p1 -f p2 -n 3 --use_sim_time

@@ -1,0 +1,25 @@
+<?xml version='1.0' ?>
+
+<launch>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="map_name" default="tb3"/>
+
+  <!-- Common launch -->
+  <include file="$(find-pkg-share my_rmf)/launch/common.launch.xml">
+    <arg name="use_sim_time" value="$(var use_sim_time)"/>
+    <arg name="viz_config_file" value ="$(find-pkg-share my_rmf)/rviz_config/fit_office.rviz"/>
+    <arg name="config_file" value="$(find-pkg-share my_rmf)/rmf_config/$(var map_name).building.yaml"/>
+    <arg name="dashboard_config_file" value="$(find-pkg-share my_rmf)/dashboard_config/tb3.json"/>
+  </include>
+
+  <!-- TinyRobot fleet adapter -->
+  <group>
+    <include file="$(find-pkg-share rmf_demos_fleet_adapter)/launch/fleet_adapter.launch.xml">
+      <arg name="use_sim_time" value="$(var use_sim_time)"/>
+      <arg name="nav_graph_file" value="$(find-pkg-share my_rmf)/maps/$(var map_name)/nav_graphs/0.yaml" />
+      <arg name="config_file" value="$(find-pkg-share my_rmf)/config/tb3/tinyRobot_config.yaml"/>
+    </include>
+  </group>
+
+</launch>
+

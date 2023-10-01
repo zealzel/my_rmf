@@ -2,7 +2,7 @@
 
 <launch>
 
-  <arg name="fleet_name" default="fitrobot" description="Name of this fleet of tinyRobot robots"/>
+  <arg name="fleet_name" default="turtlebot3" description="Name of this fleet of tinyRobot robots"/>
   <arg name="use_sim_time" default="false" description="Use the /clock topic for time to sync with simulation"/>
   <arg name="nav_graph_file" description="Nav graph required by fleet adapter"/>
 

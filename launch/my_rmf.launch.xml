@@ -12,8 +12,8 @@
   </include>
 
   <!-- Simulation launch -->
-  <include file="$(find-pkg-share rmf_demos_gz)/simulation.launch.xml">
-    <arg name="map_name" value="fit_office" />
+  <include file="$(find-pkg-share my_rmf)/launch/my_sim.launch.xml">
+    <arg name="map_name" value="tb3" />
     <arg name="gazebo_version" value="$(var gazebo_version)" />
   </include>
 

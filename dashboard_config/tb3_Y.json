@@ -1,0 +1,34 @@
+{
+  "world_name" : "Turtlebot World tb3_Y",  
+  "valid_task": ["Delivery", "Loop"],
+  "task": {
+    "Delivery": {
+      "option": {
+        "my_good": {
+          "pickup_place_name": "p1",
+          "pickup_dispenser": "p2",
+          "dropoff_place_name": "p3",
+          "dropoff_ingestor": "p4"
+        }
+      }
+    },
+    "Loop": {
+      "places": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "turtleBot1_charger"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}
+

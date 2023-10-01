@@ -1,8 +1,9 @@
+coordinate_system: reference_image
 crowd_sim:
   agent_groups:
-    - {agents_name: [], agents_number: 0, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
+    - {agents_name: ["", tinyRobot1], agents_number: 2, group_id: 0, profile_selector: external_agent, state_selector: external_static, x: 0, y: 0}
   agent_profiles:
-    - {ORCA_tau: 1, ORCA_tauObst: 0.4, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
+    - {ORCA_tau: 1, ORCA_tauObst: 0.40000000000000002, class: 1, max_accel: 0, max_angle_vel: 0, max_neighbors: 10, max_speed: 0, name: external_agent, neighbor_dist: 5, obstacle_set: 1, pref_speed: 0, r: 0.25}
   enable: 0
   goal_sets: []
   model_types: []
@@ -10,7 +11,7 @@ crowd_sim:
   states:
     - {final: 1, goal_set: -1, name: external_static, navmesh_file_name: ""}
   transitions: []
-  update_time_step: 0.1
+  update_time_step: 0.10000000000000001
 graphs:
   {}
 levels:
@@ -18,58 +19,56 @@ levels:
     drawing:
       filename: ../maps/png/turtlebot3_map.png
     elevation: 0
-    flattened_x_offset: 0
-    flattened_y_offset: 0
     floors:
       - parameters: {ceiling_scale: [3, 1], ceiling_texture: [1, blue_linoleum], indoor: [2, 0], texture_name: [1, rubber_pieces], texture_rotation: [3, 0], texture_scale: [3, 1]}
         vertices: [2, 15, 14, 13, 12, 1, 11, 10, 9, 8, 7, 6, 5, 0, 4, 3]
     lanes:
-      - [32, 33, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
-      - [33, 34, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
-      - [34, 35, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
-      - [35, 36, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""]}]
+      - [32, 33, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [33, 34, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [34, 35, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
+      - [35, 36, {bidirectional: [4, false], demo_mock_floor_name: [1, ""], demo_mock_lift_name: [1, ""], graph_idx: [2, 0], orientation: [1, ""], speed_limit: [3, 0]}]
     layers:
       {}
     measurements:
-      - [0, 1, {distance: [3, 5.3]}]
+      - [0, 1, {distance: [3, 5.2999999999999998]}]
     vertices:
-      - [142.094, 182.785, 0, ""]
-      - [247.116, 183.538, 0, ""]
-      - [178.728, 133.881, 0, ""]
-      - [173.011, 142.219, 0, ""]
-      - [165.149, 142.695, 0, ""]
-      - [164.673, 223.932, 0, ""]
-      - [173.249, 223.932, 0, ""]
-      - [179.443, 234.176, 0, ""]
-      - [222.325, 234.653, 0, ""]
-      - [227.328, 224.409, 0, ""]
-      - [235.428, 224.171, 0, ""]
-      - [253.057, 193.439, 0, ""]
-      - [252.818, 172.951, 0, ""]
+      - [142.09399999999999, 182.785, 0, ""]
+      - [247.11600000000001, 183.53800000000001, 0, ""]
+      - [178.72800000000001, 133.881, 0, ""]
+      - [173.011, 142.21899999999999, 0, ""]
+      - [165.149, 142.69499999999999, 0, ""]
+      - [164.673, 223.93199999999999, 0, ""]
+      - [173.249, 223.93199999999999, 0, ""]
+      - [179.44300000000001, 234.17599999999999, 0, ""]
+      - [222.32499999999999, 234.65299999999999, 0, ""]
+      - [227.328, 224.40899999999999, 0, ""]
+      - [235.428, 224.17099999999999, 0, ""]
+      - [253.05699999999999, 193.43899999999999, 0, ""]
+      - [252.81800000000001, 172.95099999999999, 0, ""]
       - [236.38, 143.886, 0, ""]
-      - [228.757, 144.125, 0, ""]
-      - [222.087, 132.928, 0, ""]
-      - [176.323, 159.618, 0, ""]
-      - [176.188, 163.787, 0, ""]
-      - [180.357, 163.787, 0, ""]
-      - [180.491, 159.349, 0, ""]
-      - [219.758, 203.054, 0, ""]
-      - [219.893, 207.222, 0, ""]
-      - [223.927, 207.222, 0, ""]
-      - [223.927, 203.188, 0, ""]
-      - [220.162, 160.021, 0, ""]
-      - [220.296, 164.056, 0, ""]
-      - [223.658, 164.19, 0, ""]
-      - [223.793, 160.156, 0, ""]
-      - [175.919, 203.188, 0, ""]
+      - [228.75700000000001, 144.125, 0, ""]
+      - [222.08699999999999, 132.928, 0, ""]
+      - [176.32300000000001, 159.61799999999999, 0, ""]
+      - [176.18799999999999, 163.78700000000001, 0, ""]
+      - [180.357, 163.78700000000001, 0, ""]
+      - [180.49100000000001, 159.34899999999999, 0, ""]
+      - [219.75800000000001, 203.054, 0, ""]
+      - [219.893, 207.22200000000001, 0, ""]
+      - [223.92699999999999, 207.22200000000001, 0, ""]
+      - [223.92699999999999, 203.18799999999999, 0, ""]
+      - [220.16200000000001, 160.02099999999999, 0, ""]
+      - [220.29599999999999, 164.05600000000001, 0, ""]
+      - [223.65799999999999, 164.19, 0, ""]
+      - [223.79300000000001, 160.15600000000001, 0, ""]
+      - [175.91900000000001, 203.18799999999999, 0, ""]
       - [175.785, 206.685, 0, ""]
-      - [180.895, 206.685, 0, ""]
+      - [180.89500000000001, 206.685, 0, ""]
       - [181.029, 202.785, 0, ""]
-      - [169.668, 149.552, 0, ""]
-      - [233.103, 151.2, 0, ""]
-      - [232.691, 216.283, 0, ""]
-      - [168.433, 215.459, 0, ""]
-      - [167.197, 173.443, 0, ""]
+      - [169.66800000000001, 149.55199999999999, 0, ""]
+      - [233.10300000000001, 151.19999999999999, 0, "", {is_charger: [4, false], spawn_robot_name: [1, ""], spawn_robot_type: [1, ""]}]
+      - [232.691, 216.28299999999999, 0, p11]
+      - [168.43299999999999, 215.459, 0, p22]
+      - [167.197, 173.44300000000001, 0, tinyRobot1_charger, {is_charger: [4, true], spawn_robot_name: [1, tinyRobot1], spawn_robot_type: [1, TinyRobot]}]
     walls:
       - [2, 3, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
       - [3, 4, {alpha: [3, 1], texture_height: [3, 2.5], texture_name: [1, default], texture_scale: [3, 1], texture_width: [3, 1]}]
